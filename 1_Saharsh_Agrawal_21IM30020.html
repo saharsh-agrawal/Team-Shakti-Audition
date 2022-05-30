@@ -1,0 +1,406 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="shortcut icon" href="ts.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
+<title>Contact Us | Team Shakti</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+body{
+	background-image:url('https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y2FsbXxlbnwwfHwwfHw%3D&w=1000&q=80');
+	background-size:cover;
+	background-attachment:fixed;
+	background-position:center;
+	font-family:Verdana;
+	margin:0;
+	padding:0px;
+}
+
+#logo{
+	position:fixed;
+	width:40px;
+	left:20px;
+	top :10px;
+	z-index:3;
+}
+
+/*NAVBAR*/
+
+.navbar{
+	position:fixed;
+	top:0;
+	width:100%;
+	background:#142b47;
+	overflow:auto;
+	z-index:2;
+}
+.navbar ul{
+	padding:0px;
+	margin:0px 80px ;
+	list-style:none;
+	line-height:60px;
+}
+.navbar ul li{
+	float:left;
+}
+.navbar ul li a{
+	background:#142b47;
+	color:white;
+	width:130px;
+	text-decoration:none;
+	text-align:center;
+	display:block;
+	color:#f2f2f2;
+	font-size:18px;
+	font-family:sans-serif;
+	letter-spacing:0.5px;
+}
+.navbar ul li a:hover{
+	color:#fff;
+	opacity:0.5;
+	font-size:19px;
+}
+.search-box{
+	margin-top:15px;
+	float:right;
+	margin-right:20px;
+}
+.navbar input[type=text]{
+	padding:7px;
+	border:none;
+	font-size:16px;
+	font-family:sans-serif;
+	border-radius:5px 0 0 5px;
+}
+button{
+	float:right;
+	background:orange;
+	color:white;
+	border-radius:0 5px 5px 0;
+	cursor:pointer;
+	position:relative;
+	padding:7px;
+	font-family:sans-serif;
+	border:none;
+	font-size:16px;
+}
+
+
+/*SIDEBAR*/
+
+#container{
+	position:fixed;
+	top:0;
+    width:100%;
+	max-width: 100% !important;
+    height:77px;
+	background:#142b47;
+	z-index:2;
+}
+
+#header{
+	position:fixed;
+	top:18px;
+	left:100px;
+	font-size:30px;
+	color:#fff;
+}
+
+#toggle-btn{
+	position:fixed;
+	right:20px;
+	top:20px;
+	z-index:2;
+}
+#toggle-btn:hover{
+	cursor:pointer;
+}
+#toggle-btn span{
+	display:block;
+	width:30px;
+	height:5px;
+	background:#ffffff;
+	margin: 3px 0px;
+}
+#sidebar{
+	position:fixed;
+	width:100%;
+	height:auto;
+	top:-427px;
+	z-index:2;
+	background:#151719;
+	left:0px;
+	transition:all 500ms linear;
+	color:white;
+	border-top:1px lightblue solid;
+}
+#sidebar.active{
+	top:77px;
+}
+#sidebar ul {
+    margin: 0;
+    padding: 0px 0px;
+}
+#sidebar ul li{
+	font-style:none;
+}
+#sidebar ul li a{
+	padding:15px 20px;
+	color:rgba(230,230,230,0.9);
+	text-decoration:none;
+	display:block;
+	list-style:none;
+}
+#sidebar ul li:hover a{
+	background:lightblue;
+	transition:0.9s;
+	color:#151719;
+}
+
+
+/* Boxes */
+.contact-box,.form-box{
+	width:40%;
+	left:50%;
+	height:auto;
+	background: rgba(0, 0, 0, 0.5);
+	color:#fff;
+	top:160px;
+	position:relative;
+	transform: translate(-50%,0%);
+	box-sizing: border-box;
+	margin:40px 0px;
+	border-radius:50px;
+}
+.contact-box{
+	padding:70px 1% 15px 1%;
+}
+.contact-box a{
+	color:#fff;
+}
+.avatar{
+	width:100px;
+	height:100px;
+	border:50px;
+	position:absolute;
+	top:-50px;
+	left: 50%;
+	transform:translate(-50%,0%);
+	border-radius:50%;
+}
+.contact-box ul{
+	list-style:none;
+}
+.contact-box h1,.form-box h1{
+	margin:0;
+	padding:0 0 20px;
+	text-align:center;
+	font-size:22px;
+}
+.form-box{
+	padding:120px 30px 15px 30px;
+}
+.form-box i{
+	position:absolute;
+	left:50%;
+	transform:translate(-50%,0%);
+	top:18px;
+	font-size:90px !important;
+}
+.form-box label{
+	margin:0;
+	padding:0;
+	font-weight:bold;
+}
+.form-box input,textarea{
+	width:100%;
+	margin-bottom:20px;
+	max-width:100%;
+	min-width:100%;
+}
+.form-box input[type="text"], input[type="password"], textarea{
+	border:none;
+	border-bottom:1px solid #fff;
+	background:transparent;
+	outline:none;
+	height:40px;
+	color:#fff;
+	font-size:16px;
+}
+.form-box input[type="submit"]{
+	border:none;
+	outline:none;
+	height:40px;
+	background:#06F;
+	color:#fff;
+	font-size:18px;
+	border-radius:20px;
+}
+.form-box input[type="submit"]:hover{
+	cursor:pointer;
+	background:#39dc79;
+	color:#000;
+}
+.form-box a{
+	text-decoration:none;
+	font size=14px;
+	color:#fff;
+}
+.form-box a:hover{
+	color:#39dc79;
+}
+
+::placeholder{
+  color: lightgrey;
+  opacity: 1;
+}
+
+
+@media only screen and (max-width:899px){
+	.navbar{
+		display:none;
+	}
+	#logo{
+		top:15px;
+	}
+	.contact-box,.form-box{
+		left:10%;
+		width:80%;
+		transform: translate(0%,0%);
+	}
+	.contact-box{
+		padding:70px 10px 15px 10px;
+	}
+}
+@media only screen and (min-width:900px){
+	#sidebar, #toggle-btn, #container{
+		display:none;
+	}
+}
+
+</style>
+
+<script>
+function togglesidebar()
+{
+  document.getElementById("sidebar").classList.toggle('active');
+  document.getElementById("toggle-btn").classList.toggle('active');
+}
+</script>
+
+</head>
+
+<body>
+
+<a href="#">
+	<img src="ts.jpg" id='logo'>
+</a>
+
+<div class="navbar">
+
+	<ul>
+
+	<li><a href="#">Home</a></li>
+	<li><a href="#">About Us</a></li>
+	<li><a href="#">Contact Us</a></li>
+
+	</ul>
+
+	<form class="search-box">
+	<input type="text" placeholder="Search">
+	<button>Search</button>
+	</form>
+	
+</div>
+
+<div id="container">
+	<div id="header">
+		TEAM SHAKTI
+	</div>
+</div>
+
+<div class="toggle-btn" id="toggle-btn" onclick=togglesidebar()>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<div id="sidebar">
+    <ul>
+        <font size=3>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</font>
+	</ul>
+</div>
+
+<DIV CLASS="contact-box">
+	
+	<IMG SRC="ts.jpg" class="avatar">
+	<H1>Our Contact Details</H1>
+	
+	<ul class="contact-details list-unstyled">
+		<li>
+			<i class="fa fa-home"></i>
+			Team Shakti
+			<br>
+			IIT Kharagpur
+			<br>
+			Kharagpur
+		</li>
+		<br>
+		<li>
+			<i class="fa fa-mobile-phone"></i>
+			<a href="tel:+919654441409">+91 96544 41409</a>&nbsp;&nbsp;or
+			<br>
+			<a href="tel:+919414356489">+91 94143 56489</a>
+		</li>
+		<br>
+		<li class="contactmail">
+			<i class="fa fa-envelope-o"></i>
+			<a href="mailto:dakshvarshney2002@gmail.com">dakshvarshney2002@gmail.com</a>&nbsp;&nbsp;or
+			<br>
+			<a href="sarthak.agarwal2021@gmail.com">sarthak.agarwal2021@gmail.com</a>
+		</li>
+		<br>
+		<li>
+			<i class="fa fa-map-marker"></i>
+			<a href="https://goo.gl/maps/siJzirmjvK36KLg98" target="_blank" title="View large map on Google" class="ext" rel="noopener noreferrer">Google Map</a>
+		</li>
+	</ul>
+	
+</DIV>
+
+<DIV CLASS="form-box">
+
+<i class="fa fa-envelope"></i>
+
+<H1>Contact Us</H1>
+
+<FORM autocomplete="off" NAME="loginform" ACTION="" METHOD="post">
+
+<label>Full Name</label>
+<INPUT TYPE="text" NAME="Name" VALUE="" PLACEHOLDER="Enter Full Name" REQUIRED>
+
+<label>Email Address</label>
+<INPUT TYPE="text" NAME="Email" VALUE="" PLACEHOLDER="Enter Email Address" REQUIRED>
+
+<label>Contact Number</label>
+<INPUT TYPE="text" NAME="MobileNumber" VALUE="" PLACEHOLDER="Enter Mobile Number" REQUIRED>
+
+<label>Message</label><br><br>
+<TEXTAREA NAME="Message" VALUE="" PLACEHOLDER="Enter Message" REQUIRED style="height:150px;"></TEXTAREA>
+
+<INPUT TYPE="submit" NAME="submit" VALUE="Submit">
+
+</FORM>
+
+</DIV>
+
+<br><br><br><br><br><br><br><br>
+
+
+</body>
+</html>
